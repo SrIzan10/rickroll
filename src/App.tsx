@@ -13,9 +13,9 @@ function App() {
 
   window.addEventListener('load', function() {
     document.title = title
-    setTimeout(function() {
+/*     setTimeout(function() {
       window.location.href = 'http://www.example.com';
-    }, 4000);
+    }, 4000); */
   })
 
 	return (
