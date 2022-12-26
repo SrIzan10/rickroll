@@ -18,16 +18,15 @@ function App() {
 
   window.addEventListener('load', function() {
     document.title = title
+    setTimeout(function() {
+      window.location.href = 'http://www.example.com';
+    }, 4000);
   })
 
 	return (
     <div>
       <meta charSet="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="refresh" content="0; URL=rick.mp4" />
       <meta name="description" content={description} />
-      <meta http-equiv="cache-control" content="no-cache" />
 
       <p style={{ color: 'white' }}>
       We're no strangers to love
