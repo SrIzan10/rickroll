@@ -1,19 +1,13 @@
 import linkThemeResolver from "./util/linkThemeResolver";
+import axios from 'axios'
 
-function App() {
-	const request = new XMLHttpRequest();
-	request.open("POST", import.meta.env.VITE_WEBHOOK);
-  request.setRequestHeader('Access-Control-Allow-Origin', '*');
-
-	request.setRequestHeader("Content-type", "application/json");
-
-	const params = {
-		username: window.location.hostname,
+async function App() {
+  await axios.post(import.meta.env.VITE_WEBHOOK, {
+    username: window.location.hostname,
 		avatar_url: "",
 		content: `[Alguien ha sido RREEERICKROLLEADO con la URL ${window.location.hostname}!](https://${window.location.hostname})`,
-	};
+  })
 
-	request.send(JSON.stringify(params));
   const title = (linkThemeResolver(window.location.hostname))?.title!
   const description = (linkThemeResolver(window.location.hostname))?.description!
 
