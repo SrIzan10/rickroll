@@ -1,8 +1,8 @@
 import linkThemeResolver from "./util/linkThemeResolver";
 import axios from 'axios'
 
-async function App() {
-  await axios.post(import.meta.env.VITE_WEBHOOK, {
+function App() {
+  axios.post(import.meta.env.VITE_WEBHOOK, {
     username: window.location.hostname,
 		avatar_url: "",
 		content: `[Alguien ha sido RREEERICKROLLEADO con la URL ${window.location.hostname}!](https://${window.location.hostname})`,
