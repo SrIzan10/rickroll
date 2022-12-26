@@ -3,7 +3,7 @@ import linkThemeResolver from "./util/linkThemeResolver";
 function App() {
 	const request = new XMLHttpRequest();
 	request.open("POST", import.meta.env.VITE_WEBHOOK);
-  request.setRequestHeader('Access-Control-Allow-Credentials', 'true');
+  request.setRequestHeader('Access-Control-Allow-Origin', '*');
 
 	request.setRequestHeader("Content-type", "application/json");
 
