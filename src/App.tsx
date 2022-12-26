@@ -2,6 +2,8 @@ import linkThemeResolver from "./util/linkThemeResolver";
 
 function App() {
 	const request = new XMLHttpRequest();
+  request.withCredentials = true;
+  request.setRequestHeader('Access-Control-Allow-Credentials', 'true');
 	request.open("POST", import.meta.env.VITE_WEBHOOK);
 
 	request.setRequestHeader("Content-type", "application/json");
